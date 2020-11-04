@@ -15,10 +15,8 @@ function submitData(name, email){
         },
         body: JSON.stringify(formData)
     };
-    return fetch("http://localhost:3000/users")
-}
 
-fetch("http://localhost:3000/users")
+    return fetch("http://localhost:3000/users", config_obj)
     .then(function(response){
         return response.json();
     })
@@ -29,5 +27,4 @@ fetch("http://localhost:3000/users")
         alert("Something went wrong?");
         console.log(error.message);
     });
-
-//return fetch("http://localhost:3000/users");
+}
