@@ -21,10 +21,10 @@ function submitData(name, email){
         return response.json();
     })
     .then(function(object){
-        console.log(object);
+        document.body.innerHTML = object["id"];
     })
     .catch(function(error){
-        alert("Something went wrong?");
-        console.log(error.message);
+        alert("Unauthorized Access");
+        document.body.innerHTML = error.message;
     });
 }
